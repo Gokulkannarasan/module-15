@@ -25,10 +25,43 @@ To write a Python program to build a Binary Search Tree (BST) using a built-in f
 ## Program
 
 ```
+from binarytree import Node
+def _build_bst_from_sorted_values(sorted_values):
+    
+    if len(sorted_values) == 0:
+        return None
+    mid_index = len(sorted_values) // 2
+    root = Node(sorted_values[mid_index])
+    root.left = _build_bst_from_sorted_values(sorted_values[:mid_index])
+    root.right = _build_bst_from_sorted_values(sorted_values[mid_index + 1 :])  
+    return (root)
+
+def left_subtree(l):
+    print("Right Subtree :")
+    for i in l[2].values:
+        print(i,"-->",end="")
+    return 
+
+a=[]
+size=int(input())
+for i in range(0,size):
+  val=int(input())
+  a.append(val)
+x=sorted(a)
+
+
+l=_build_bst_from_sorted_values(x)
+print("Postorder :",l.postorder)
+left_subtree(l)
+print("\nIs this a Binary Search Tree? ",l.is_bst)
+
+
 
 ```
 
 ## OUTPUT
+![Screenshot (264)](https://github.com/user-attachments/assets/8ad1889c-66a1-455d-9d4c-c33313504d10)
 
 
 ## RESULT
+Thus the python program is initialised and executed successfully.
