@@ -21,8 +21,15 @@ To write a Python program to build the following expression tree and print the i
 ## Program
 
 ```
+from binarytree import build
+x=['*','+','-',9,3,8,4]
+tree=build(x)
+print(tree.inorder)
+print(tree.postorder)
 ```
 
 ## OUTPUT
+![Screenshot (265)](https://github.com/user-attachments/assets/0263bd1c-4502-4f86-8f2b-9875b150c1a8)
 
 ## RESULT
+Thus the python program was initialised and executed successfully.
