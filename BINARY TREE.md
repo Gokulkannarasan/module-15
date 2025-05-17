@@ -19,16 +19,19 @@ To write a Python program to build a binary tree with a root, left, and right no
 
 ## Program
 
-```python
-from binarytree import Node
-
-# Input float values for root and child nodes
-
-
-# Print the binary tree as a list
+```
+from  binarytree import build
+l=[]
+for i in range(3):
+    a=float(input())
+    l.append(a)
+root=build(l)
+print("List of nodes :",list(root))
 
 ```
 
 ## OUTPUT
+![Screenshot (263)](https://github.com/user-attachments/assets/533733d2-787e-43bb-b7f9-7baf4f52bdc9)
 
 ## RESULT
+Thus the python program is initialised and executed successfully.
